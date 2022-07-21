@@ -29,7 +29,7 @@ App = {
       const res = await fetch("BulkSender.json");
       const BulkSenderJSON = await res.json();
       App.contracts.BulkSender = TruffleContract(BulkSenderJSON);
-      App.contracts.BulkSender.setProvider(App.web3Provider);
+      App.contracts.BulkSender.setP|rovider(App.web3Provider);
 
       App.BulkSender = await App.contracts.BulkSender.deployed();
     } catch (error) {
